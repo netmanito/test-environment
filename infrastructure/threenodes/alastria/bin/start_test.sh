@@ -49,7 +49,7 @@ storage = "$PWD/$CARPETA/constellation/data"
 #   - 1: Warnings
 #   - 2: Informational messages
 #   - 3: Debug messages
-verbosity = 2
+verbosity = 3
 EOF
 }
 
@@ -77,17 +77,23 @@ PUERTO=0
 if [[ "$CARPETA" == "validator" ]]; then
 	PUERTO=0
 else
+        if [[ "$CARPETA" == "validator1" ]]; then
+	        PUERTO=3
+else
 	if [[ "$CARPETA" == "general1" ]]; then
 		PUERTO=1
 	else
 		PUERTO=2
 	fi
 fi
-
-GLOBAL_ARGS="--networkid $NETID --identity $IDENTITY --rpc --rpcaddr 0.0.0.0 --rpcapi admin,db,eth,debug,miner,net,shh,txpool,personal,web3,quorum,istanbul --rpcport 2200$PUERTO --port 2100$PUERTO --targetgaslimit 18446744073709551615 --ethstats $IDENTITY:bb98a0b6442386d0cdf8a31b267892c1@$NODE_IP:3000 "
+fi
+GLOBAL_ARGS="--networkid $NETID --identity $IDENTITY --rpc --rpcaddr 0.0.0.0 --verbosity 3 --vmdebug --rpcapi admin,db,eth,debug,miner,net,shh,txpool,personal,web3,quorum,istanbul --rpcport 2200$PUERTO --port 2100$PUERTO --targetgaslimit 18446744073709551615 --ethstats $IDENTITY:bb98a0b6442386d0cdf8a31b267892c1@$NODE_IP:3000 "
 CONSTELLATION_PORT="900$PUERTO"
 
 if [[ "$CARPETA" == "validator" ]]; then
+	nohup geth --datadir "${PWD}"/"$CARPETA" $GLOBAL_ARGS --mine --minerthreads 1 --syncmode "full" 2>> "${PWD}"/logs/quorum_"$CARPETA"_"${_TIME}".log &
+else
+if [[ "$CARPETA" == "validator1" ]]; then
 	nohup geth --datadir "${PWD}"/"$CARPETA" $GLOBAL_ARGS --mine --minerthreads 1 --syncmode "full" 2>> "${PWD}"/logs/quorum_"$CARPETA"_"${_TIME}".log &
 else
 	if [[ "$PUERTO" == "1" ]]; then
@@ -100,7 +106,7 @@ else
 	check_port "900$PUERTO"
 	nohup env PRIVATE_CONFIG="${PWD}"/"$CARPETA"/constellation/constellation.conf geth --datadir "${PWD}"/"$CARPETA" --debug $GLOBAL_ARGS 2>> "${PWD}"/logs/quorum_"$CARPETA"_"${_TIME}".log &
 fi
-
+fi
 echo "Verify if ${PWD}/logs/ have new files."
 
 set +u

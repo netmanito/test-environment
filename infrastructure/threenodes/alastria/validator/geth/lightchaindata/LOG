@@ -1,6 +1,26 @@
-=============== Feb 19, 2018 (CET) ===============
-20:39:36.408412 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
-20:39:36.416428 db@open opening
-20:39:36.418514 version@stat F·[] S·0B[] Sc·[]
-20:39:36.423236 db@janitor F·2 G·0
-20:39:36.423553 db@open done T·6.985008ms
+=============== Oct 30, 2018 (CET) ===============
+15:38:26.078713 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+15:38:26.092170 db@open opening
+15:38:26.093211 version@stat F·[] S·0B[] Sc·[]
+15:38:26.100049 db@janitor F·2 G·0
+15:38:26.100085 db@open done T·7.880677ms
+=============== May 23, 2019 (CEST) ===============
+15:46:26.862665 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+15:46:26.967991 version@stat F·[] S·0B[] Sc·[]
+15:46:26.968034 db@open opening
+15:46:26.968152 journal@recovery F·1
+15:46:26.969209 journal@recovery recovering @1
+15:46:27.203723 memdb@flush created L0@2 N·11 S·872B ">\xc9@..\x10\xf3{,v2":"sec..ہ\xe6,v1"
+15:46:27.204633 version@stat F·[1] S·872B[872B] Sc·[0.25]
+15:46:27.777692 db@janitor F·3 G·0
+15:46:27.777744 db@open done T·809.693225ms
+=============== May 23, 2019 (CEST) ===============
+15:57:33.639665 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+15:57:33.639918 version@stat F·[1] S·872B[872B] Sc·[0.25]
+15:57:33.639943 db@open opening
+15:57:33.640027 journal@recovery F·1
+15:57:33.645742 journal@recovery recovering @3
+15:57:33.803665 memdb@flush created L0@5 N·1 S·409B "eth..\xddGL,v13":"eth..\xddGL,v13"
+15:57:33.804164 version@stat F·[2] S·1KiB[1KiB] Sc·[0.50]
+15:57:34.110427 db@janitor F·4 G·0
+15:57:34.110476 db@open done T·470.518241ms

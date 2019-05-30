@@ -9,7 +9,8 @@ EPWD="$(pwd)"
 _TIME=$(date +%Y%m%d%H%M%S)
 
 if [[ ! -d "./eth-netstats" ]]; then
-    git clone https://github.com/cubedro/eth-netstats
+    # git clone https://github.com/cubedro/eth-netstats
+    git clone https://github.com/alastria/eth-netstats.git
     mkdir logs
     cd eth-netstats
     npm install

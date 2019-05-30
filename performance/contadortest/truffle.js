@@ -1,10 +1,4 @@
 module.exports = {
-  solc: {
-    optimizer: {
-      enabled: true,
-      runs: 200
-    }
-  },
   networks: {
     localhost: {
       host: "localhost",
@@ -15,7 +9,7 @@ module.exports = {
     },
     general1: {
       host: "localhost",
-      port: 22001,
+      port: 22002,
       network_id: "*", // Match any network id
       gas: 0xfffff,
       gasPrice: 0x0,

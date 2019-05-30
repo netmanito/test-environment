@@ -1,6 +1,9 @@
 validator/geth/nodes/
 general1/geth/nodes/
+general1/constellation/data
 general2/geth/nodes/
+general1/geth/lightchaindata/
+general2/geth/lightchaindata/
 general1/geth/chaindata/
 general2/geth/chaindata/
 validator/geth/chaindata/
