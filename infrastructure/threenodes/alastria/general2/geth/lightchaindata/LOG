@@ -14,3 +14,24 @@
 14:37:25.041322 version@stat F·[1] S·872B[872B] Sc·[0.25]
 14:37:25.335125 db@janitor F·3 G·0
 14:37:25.335170 db@open done T·513.844218ms
+=============== May 31, 2019 (CEST) ===============
+10:23:44.725214 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+10:23:44.788064 version@stat F·[1] S·872B[872B] Sc·[0.25]
+10:23:44.788104 db@open opening
+10:23:44.788338 journal@recovery F·1
+10:23:44.789343 journal@recovery recovering @3
+10:23:45.133504 memdb@flush created L0@5 N·1 S·409B "eth..\xddGL,v13":"eth..\xddGL,v13"
+10:23:45.138635 version@stat F·[2] S·1KiB[1KiB] Sc·[0.50]
+10:23:46.311841 db@janitor F·4 G·0
+10:23:46.311888 db@open done T·1.523767205s
+=============== May 31, 2019 (CEST) ===============
+10:28:45.325699 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+10:28:45.325963 skipping CURRENT.bak: invalid file num: strconv.ParseInt: parsing "bak": invalid syntax
+10:28:45.326134 version@stat F·[2] S·1KiB[1KiB] Sc·[0.50]
+10:28:45.326163 db@open opening
+10:28:45.326262 journal@recovery F·1
+10:28:45.327193 journal@recovery recovering @6
+10:28:45.692059 memdb@flush created L0@8 N·1 S·426B "eth..\xddGL,v15":"eth..\xddGL,v15"
+10:28:45.742347 version@stat F·[3] S·1KiB[1KiB] Sc·[0.75]
+10:28:46.389189 db@janitor F·5 G·0
+10:28:46.389237 db@open done T·1.063058634s

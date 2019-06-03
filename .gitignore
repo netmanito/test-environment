@@ -5,7 +5,7 @@ infrastructure/testnet/nohup.out
 infrastructure/testnet/alastria-node
 infrastructure/testnet/eth-netstats
 infrastructure/testnet/geth_faulty
-
+performance/contadortest/.node*
 .vagrant/
 build
 .DS_Store
